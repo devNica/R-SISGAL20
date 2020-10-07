@@ -28,11 +28,25 @@ p{
   transform: scale(1.2);
 }
   
-.img-fluid{
+.menu-img{
   display: block;
   margin: auto;
+  height: 125px;
+  width: 125px;
+}
+
+.special-menu-img{
+  display: block;
+  margin: auto;
+  height: 150px;
+  width: 150px;
 }
 
 .bg-navbar {
     background-color: #2263a8 !important;
+}
+
+.menu-option-title{
+  font-family: 'Kalam', sans-serif;
+  font-size: 1.7rem;
 }
