@@ -46,6 +46,11 @@ p{
     background-color: #2263a8 !important;
 }
 
+.menu-title{
+  font-family: 'Kalam', sans-serif;
+  font-size: 2.5rem;
+}
+
 .menu-option-title{
   font-family: 'Kalam', sans-serif;
   font-size: 1.7rem;
