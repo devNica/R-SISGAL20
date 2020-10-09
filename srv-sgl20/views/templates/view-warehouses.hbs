@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="boder">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Warehouse</th>
+                <th scope="col">State</th>
+                <th scope="col">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each warehouses}}
+                <tr>
+                    <th scope="row" class="text-center">{{this.idwarehouse}}</th>
+                    <td class="text-center">{{this.warehouse}}</td>
+                    <td class="text-center">{{this.isActive}}</td>
+                    <td class="text-center">
+                        <a href="/libros/asignar/{{this.idwarehouse}}" class="btn btn-sm btn-primary"><i class="fas fa-book-reader"></i></a>
+                        <a href="/libros/editar/{{this.idwarehouse}}" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

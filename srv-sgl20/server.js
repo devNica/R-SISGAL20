@@ -23,11 +23,13 @@ app.use(express.urlencoded({ extended: false }));
 
 //ENRUTADORES
 const indexRouter = require('./routes/index.routes');
+const warehouseRouter = require('./routes/warehouse.routes');
 app.use('/index', indexRouter);
+app.use('/sisgal/api/v1.0/', warehouseRouter)
 
-db.sequelize.sync()
+db.sequelize.sync({alter: true})
     .then(()=>{
-        console.log(`All model has been created`)
+        //console.log(`All model has been created`)
         app.listen(PORT, ()=>{
             console.log(`Server is running on PORT: ${PORT}`);
         })
