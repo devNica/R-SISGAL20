@@ -10,7 +10,10 @@ let app = express();
 
 
 //CONFIGURACION DE HANDLEBARS COMO MOTOR DE PLANTILLAS
-app.engine('hbs', hbs({ defaultLayout: 'base', extname: 'hbs' }));
+app.engine('hbs', hbs({ defaultLayout: 'base', extname: 'hbs', runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true
+}}));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 

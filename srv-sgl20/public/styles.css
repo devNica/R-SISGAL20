@@ -55,3 +55,17 @@ p{
   font-family: 'Kalam', sans-serif;
   font-size: 1.7rem;
 }
+
+.table-column-title{
+  font-family: 'Kalam', sans-serif;
+  font-size: 1.1rem;
+  background-color: #2263a8 !important;
+  color: aliceblue;
+  text-align: center;
+}
+
+.table-row-content{
+  font-family: 'Kalam', sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+}
