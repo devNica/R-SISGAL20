@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-dark form-card-title">
+            WAREHOUSE REGISTRATION FORM
+        </div>
+        <div class="card-body">
+            
+            <form action="/sisgal/api/v1.0/create-warehouse" method="POST">
+                <div class="form-group">
+                    <label for="warehouse" class="form-input-title">WAREHOUSE:</label>
+                    <input type="text" name="warehouse" id="warehouse" placeholder="Enter warehouse name" class="form-control form-input-content">
+                </div>
+               
+               <div class="form-group">
+                    <button type="submit" class="btn btn-success form-button-title">Save <i class="fas fa-save"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

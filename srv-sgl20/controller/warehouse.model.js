@@ -17,11 +17,25 @@ Warehouse.fetchAll = (req, res)=>{
                 state: e.isActive === 1 ? 'ACTIVE' : 'INACTIVE'
             }
         })
-        console.log(data)
+        
         res.render('templates/view-warehouses', {warehouses: data})
         
     })
 }
 
+Warehouse.create = (req, res)=>{
+    if(req.method === 'GET'){
+        res.render('templates/create-warehouse')
+    }
+    if(req.method === 'POST'){
+        
+        ws.create({warehouse: req.body.warehouse, isActive: 1})
+        .then(result =>{
+            res.redirect('/sisgal/api/v1.0/warehouse-list')
+        })
+        .catch(error => console.log(error))
+    }
+    
+}
 
 module.exports = Warehouse;

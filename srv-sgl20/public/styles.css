@@ -69,3 +69,24 @@ p{
   font-size: 0.8rem;
   text-align: center;
 }
+
+.form-input-title {
+  font-family: 'Kalam', sans-serif;
+  font-size: 1.2rem;
+}
+
+.form-button-title {
+  font-family: 'Kalam', sans-serif;
+  font-size: 1.2rem;
+}
+
+.form-input-content{
+  font-family: 'Kalam', sans-serif;
+  font-size: 1.1rem;
+}
+
+.form-card-title{
+  font-family: 'Kalam', sans-serif;
+  font-size: 1.1rem;
+  color: aliceblue;
+}

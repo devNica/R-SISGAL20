@@ -16,14 +16,14 @@
                     <td class="table-row-content">{{this.warehouse}}</td>
                     <td class="table-row-content">{{this.state}}</td>
                     <td class="table-row-content">
-                        <a href="/sisgal/api/v1.0/warehouse-create" class="btn btn-sm btn-primary"><i class="fas fa-plus-square"></i></a>
-                        <a href="/sisgal/api/v1.0/warehouse-edit/{{this.id}}" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
+                       <a href="/sisgal/api/v1.0/warehouse-edit/{{this.id}}" class="btn btn-sm btn-outline-dark"> Edit <i class="fas fa-edit"></i></a>
+                       <a href="/sisgal/api/v1.0/warehouse-delete/{{this.id}}" class="btn btn-sm btn-outline-dark"> Delete <i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 {{/each}}
             </tbody>
         </table>
-
+        <a href="/sisgal/api/v1.0/create-warehouse" class="btn btn-sm btn-outline-primary form-button-title"> Create Warehouse <i class="fas fa-plus-square"></i></a>
 
     </div>
 </div>
