@@ -90,3 +90,7 @@ p{
   font-size: 1.1rem;
   color: aliceblue;
 }
+
+.form-label-option{
+  visibility: hidden;
+}
