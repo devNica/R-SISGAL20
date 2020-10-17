@@ -3,7 +3,6 @@ let cors = require('cors');
 let bodyparser = require('body-parser');
 let hbs = require('express-handlebars');
 let path = require('path');
-let db = require('./models');
 
 let PORT = process.env.PORT || 4800;
 let app = express();
@@ -30,14 +29,6 @@ const warehouseRouter = require('./routes/warehouse.routes');
 app.use('/index', indexRouter);
 app.use('/sisgal/api/v1.0/', warehouseRouter)
 
-db.sequelize.sync({alter: true})
-    .then(()=>{
-        //console.log(`All model has been created`)
-        app.listen(PORT, ()=>{
-            console.log(`Server is running on PORT: ${PORT}`);
-        })
-    })
-    .catch(error =>{
-        console.log(`Warning!: ${error}`)
-    })
-
+app.listen(PORT, ()=>{
+    console.log(`Server is running on PORT: ${PORT}`);
+})

@@ -8,13 +8,13 @@ const Warehouse = (data)=>{
 }
 
 Warehouse.fetchAll = (req, res)=>{
-    ws.findAll({raw: true, plain: false})
+    db.warehouse.findAll({raw: true, plain: false})
     .then(result=>{
         let data=result.map((e,i)=>{
             return {
                 id: e.idwarehouse,
                 warehouse: e.warehouse,
-                state: e.isActive === 1 ? 'ACTIVE' : 'INACTIVE'
+                state: e.state === 1 ? 'ACTIVE' : 'INACTIVE'
             }
         })
         

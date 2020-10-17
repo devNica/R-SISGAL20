@@ -1,24 +1,20 @@
 'use strict'
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('warehouse', {
-    idwarehouse: {
+  return sequelize.define('measurement', {
+    idmeasurement: {
       autoIncrement: true,
       type: DataTypes.INTEGER(11),
       allowNull: false,
       primaryKey: true
     },
-    warehouse: {
-      type: "MEDIUMTEXT",
-      allowNull: false
-    },
-    state: {
-      type: DataTypes.INTEGER(1),
+    measurement: {
+      type: DataTypes.STRING(10),
       allowNull: false,
-      defaultValue: 1
+      unique: "measurement_UNIQUE"
     }
   }, {
     sequelize,
-    tableName: 'warehouse',
+    tableName: 'measurement',
     timestamps: false
     });
 };
